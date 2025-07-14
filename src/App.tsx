@@ -274,18 +274,26 @@ function App() {
             <p className="text-lg mb-8 leading-relaxed">
               Tired of the traditional paper pass system? We were too! That's why we created the SVCE Hostels App. 
               We understand the frustrations of manual verification, long queues, and the hassle of physical passes. 
-              Our goal is to simplify and secure hostel entry for all SVCE students.
+              Our goal is to simplify and secure hostel entry for all SVCE students. Haven’t registered yet? Don’t wait—secure your SPOT with the link below!
             </p>
             
-            <div className="mb-10 text-center">
+            {/* Button Container */}
+            <div className="mb-10 flex flex-col md:flex-row justify-center items-center gap-4">
               <button 
                 onClick={scrollToDownload}
                 className="px-8 py-4 text-xl font-bold rounded-lg shadow-lg transform transition-all duration-300 bg-gradient-to-r from-pink-500 to-yellow-400 hover:from-pink-600 hover:to-yellow-500 hover:-translate-y-1 hover:shadow-xl"
               >
-                Click Here to Download
-              </button>
+              Click Here to Download
+            </button>
+
+            <button 
+              onClick={() => window.location.href = 'http://forms.svcehostels.surge.sh'}
+          className="px-8 py-4 text-xl font-bold rounded-lg shadow-lg transform transition-all duration-300 bg-gradient-to-r from-purple-500 to-blue-400 hover:from-purple-600 hover:to-blue-500 hover:-translate-y-1 hover:shadow-xl"
+            >
+              Click Here to Register
+            </button>
             </div>
-            
+
             <div className="overflow-hidden rounded-xl shadow-2xl">
               <img 
                 src="/assets/AppHome.jpg" 
@@ -605,12 +613,12 @@ function App() {
         {/* Footer */}
         <div className="mt-20 bg-white/5 backdrop-blur-md relative z-10">
         <footer className="py-8 text-center">
-        <div className="mt-20 bg-white/5 backdrop-blur-lg relative z-10"> </div>© 2025 SVCE Hostels. All Rights Reserved.</p>
+          <p className="text-white/90">© 2025 SVCE Hostels. All Rights Reserved.</p>
           <p className="mt-2 text-white/90">Dev Credits: @TheHostelAppTeam</p>
         </footer>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 
